@@ -1,0 +1,52 @@
+<html>
+<head>
+<script>
+	function zbroji(){
+		alert(Number(document.getElementById("op1").value) + Number(document.getElementById("op2").value));}
+	function oduzmi(){
+		alert(Number(document.getElementById("op1").value) - Number(document.getElementById("op2").value));}
+	function mnozi(){
+		alert(Number(document.getElementById("op1").value) * Number(document.getElementById("op2").value));}
+	function dijeli(){
+		alert(Number(document.getElementById("op1").value) / Number(document.getElementById("op2").value));}
+	function sinn(){
+		alert("sin(" + document.getElementById("op1").value + ") = " + Math.sin(Number(document.getElementById("op1").value)));}
+	function coss(){
+		alert("cos(" + document.getElementById("op1").value + ") = " + Math.cos(Number(document.getElementById("op1").value)));}
+	function tann(){
+		alert("tan(" + document.getElementById("op1").value + ") = " + Math.tan(Number(document.getElementById("op1").value)));}
+	function lnn(){
+		alert("ln(" + document.getElementById("op1").value + ") = " + Math.log(Number(document.getElementById("op1").value)));}
+	function logg(){
+		alert("log(" + document.getElementById("op1").value + ") = " + Math.log10(Number(document.getElementById("op1").value)));}
+	function pow2(){
+		alert(document.getElementById("op1").value + "^2 = " + Math.pow(Number(document.getElementById("op1").value), 2));}
+	function pow3(){
+		alert(document.getElementById("op1").value + "^3 = " + Math.pow(Number(document.getElementById("op1").value), 3));}
+	function pown(){
+		alert(document.getElementById("op1").value + "^" + document.getElementById("op2").value + " = " + 
+		Math.pow(Number(document.getElementById("op1").value), Number(document.getElementById("op2").value)));}
+</script>
+
+</head>
+
+<body>
+<form>
+<input type="text" id="op1"/>operand1<br/>
+<input type="text" id="op2"/>operand2<br/>
+</form>
+<button onclick="zbroji()"> + </button>
+<button onclick="oduzmi()"> - </button>
+<button onclick="mnozi()"> * </button>
+<button onclick="dijeli()"> / </button><br/>
+<button onclick="sinn()"> sin </button>
+<button onclick="coss()"> cos </button>
+<button onclick="tann()"> tan </button><br/>
+<button onclick="lnn()"> ln </button>
+<button onclick="logg()"> log </button><br/>
+<button onclick="pow2()"> ^2 </button>
+<button onclick="pow3()"> ^3 </button>
+<button onclick="pown()"> ^n </button>
+
+</body>
+</html>

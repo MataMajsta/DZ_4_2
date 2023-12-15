@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+	function change(){
+	if(document.getElementById("onOff").src == "file:///C:/Users/Mata/Desktop/on-removebg-preview.png"){
+		document.getElementById("onOff").src = "off-removebg-preview.png";
+		document.getElementById("zarulja").src = "zarulja_off_2.png";
+		}
+	else{
+		document.getElementById("onOff").src = "on-removebg-preview.png";
+		document.getElementById("zarulja").src = "zarulja_on_2.png";
+	}
+	}
+</script>
+
+</head>
+
+<body>
+<img id="onOff" src="off-removebg-preview.png" onclick="change()" height="338px" width="174px">
+<img id="zarulja" src="zarulja_off_2.png">
+
+</body>
+</html>
