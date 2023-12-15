@@ -1,0 +1,42 @@
+<html>
+<head>
+<script>
+	function submit(){
+		var x = document.getElementById("unos").value;
+		if(provjera(x))alert("Tocan unos tablice!");
+		else alert("Los unos tablice!");
+	}
+	function provjera(x){
+		var kontrola = false;
+		var niz = "AEJKMOT";
+		for(i = 0; i < niz.length; i++)
+			if(x[0] == niz[i])kontrola = true;
+		if(kontrola); else return false;
+		kontrola = false;
+		for(i = 0; i < niz.length; i++)
+			if(x[4] == niz[i])kontrola = true;
+		if(kontrola); else return false;
+		pom = x[1] + x[2];
+		if((pom > "99") || (pom < "00")) return false;
+		pom = x[6] + x[8];
+		if((pom > "999") || (pom < "000")) return false;
+		if((x[3] != x[5]) || (x[3] != "-")) return false;
+		return true;
+	}
+</script>
+
+</head>
+
+<body>
+<form>
+Unesite BiH tablicu auta: 
+<input type="text" id="unos">
+</input>
+</form>
+<button onclick="submit()"> Submit </button>
+<p id="ocjena">
+
+</p>
+
+</body>
+</html>

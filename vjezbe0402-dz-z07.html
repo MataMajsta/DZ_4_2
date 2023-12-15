@@ -1,0 +1,25 @@
+<html>
+<head>
+<script>
+	function godine(){
+		var datum = new Date(document.getElementById("mjesec").value + '/' + document.getElementById("dani").value + '/' + document.getElementById("godine").value);
+		var danas = new Date(Date.now());
+		var x = Number(danas.getYear()) - Number(datum.getYear());
+		if(danas.getMonth() < datum.getMonth())x--;
+		else if((danas.getMonth() == datum.getMonth()) && (danas.getDate() < datum.getDate()))x--;
+		alert("Danas imate " + x + " godina!");
+	}
+</script>
+
+</head>
+
+<body>
+<form>
+Unesite dan (01-31) <input type="text" id="dani"/><br/>
+Unesite mjesec (01-12) <input type="text" id="mjesec"/><br/>
+Unesite godinu (npr. 1970): <input type="text" id="godine"/><br/>
+</form>
+<button onclick="godine()"> Zbroji </button>
+
+</body>
+</html>

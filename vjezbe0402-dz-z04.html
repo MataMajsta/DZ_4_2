@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+	function submit(){
+		var x;
+		switch(document.getElementById("unos").value){
+			case "1": x = "nedovoljan"; break;
+			case "2": x = "dovoljan"; break;
+			case "3": x = "dobar"; break;
+			case "4": x = "vrlo dobar"; break;
+			case "5": x = "odlican"; break;
+			default: x = "nevaljan unos"; break;
+		
+		}
+		document.getElementById("ocjena").innerHTML = ("Vasa ocjena je: " + x);
+		document.getElementById("unos").value = "";
+	}	
+</script>
+
+</head>
+
+<body>
+<form>
+Unesite vasu ocjenu (1-5): 
+<input type="text" id="unos">
+</input>
+</form>
+<button onclick="submit()"> Submit </button>
+<p id="ocjena">
+
+</p>
+
+</body>
+</html>
